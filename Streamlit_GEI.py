@@ -16,14 +16,14 @@ st.set_page_config(page_title="Global Economy",layout="wide") #configuración de
 @st.cache_data # maneja el caché de la app
 
 def load_data(): # cargamos los datos y hacemos una copia en la función
-    df = pd.read_csv(r'Futuros_proyectos\global_economy\definitivo\data\Clean_GEI.csv') 
+    df = pd.read_csv(r'data/Clean_GEI.csv') 
     df_clean = df.copy()
     return df_clean
 
 data = load_data() # asignamos una variable a la función de carga de datos
 
 # ponemos un PNG en el menú lateral y desplegamos botones para las diferentes opciones
-st.sidebar.image(r"Futuros_proyectos\global_economy\definitivo\archivos\Logo_European_Central_Bank.svg")
+st.sidebar.image(r"archivos/Logo_European_Central_Bank.svg")
 option = st.sidebar.radio( 
     "Select a section:",
     ["Landing", "Analysis", "Dashboard", "Predictor", "Farewell video", "Full dataset"]
@@ -95,7 +95,7 @@ def show_landing(): # función para gestionar la landing
         """, unsafe_allow_html=True)
             
     # Cargamos el CSV donde hemos puesto los paises y las coordenadas
-    csv_mapa = r"Futuros_proyectos\global_economy\definitivo\data\df_combinado.csv"
+    csv_mapa = r"data/df_combinado.csv"
 
     df = pd.read_csv(csv_mapa)
     
@@ -399,7 +399,7 @@ def predictor():
     # Cargamos datos del CSV al iniciar
     if 'predictions' not in st.session_state:
         try:
-            initial_data = pd.read_csv(r"Futuros_proyectos\global_economy\definitivo\data\Eurozona.csv")  # Asegúrate de especificar la ruta correcta a tu CSV
+            initial_data = pd.read_csv(r"data/Eurozona.csv")  # Asegúrate de especificar la ruta correcta a tu CSV
             st.session_state.predictions = initial_data.to_dict('records')
         except Exception as e:
             st.error(f"Error loading initial data: {e}")
@@ -460,7 +460,7 @@ def predictor():
         # Cargamos el modelo ARIMA para comparar      
         st.title('ARIMA Model Predictions')
             
-        df = pd.read_csv(r"Futuros_proyectos\global_economy\definitivo\data\ARIMAForecast.csv")
+        df = pd.read_csv(r"data/ARIMAForecast.csv")
             
         plt.figure(figsize=(12, 6))
         
@@ -483,7 +483,7 @@ def predictor():
         # Cargamos el modelo NeuralProphet para comparar      
         st.title('NeuralProphet Model Predictions')
             
-        dfnp = pd.read_csv(r"Futuros_proyectos\global_economy\definitivo\data\NeuralProphetForecast_limits.csv")
+        dfnp = pd.read_csv(r"data/NeuralProphetForecast_limits.csv")
         
         plt.figure(figsize=(12, 6))
         
@@ -509,7 +509,7 @@ def predictor():
 # definimos la funcion video para mostrar un video al final de la presentación         
 def video():
     st.header("Farewell video")
-    st.video(r"Futuros_proyectos\global_economy\definitivo\archivos\Top 15 países PIBpc 1.mp4")
+    st.video(r"archivos/Top 15 países PIBpc 1.mp4")
 
 # Definimos la función para mostrar el dataset completo
 def show_dataset(): 
