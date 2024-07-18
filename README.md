@@ -71,8 +71,8 @@ Welcome to the Global Economy Indicators Study and Forecast Predictor repository
 Special thanks to all contributors who have made this project possible through their dedication and expertise.
 
 - GitHub of Contributors:
-  - [Contributor 1](#) <!-- Link to GitHub profile -->
-  - [Contributor 2](#) <!-- Link to GitHub profile -->
+  - [Contributor 1](#) https://github.com/MikiSerra
+  - [Contributor 2](#) https://github.com/JuanPedroMarquez
 
 ---
 
