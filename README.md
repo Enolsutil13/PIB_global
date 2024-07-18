@@ -1,5 +1,5 @@
 
-<center><img src="https://images.axios.com/rq8NSQ_7BgqnUjNqDifL89lyjm4=/0x0:1920x1080/1920x1080/filters:no_upscale()/2024/06/10/1718057284065.gif" width="900" height="500"></center>
+<center><img src="https://images.axios.com/fwS8MUegVxYlXGLmOBDo0UhhQd8=/0x0:1920x1080/1920x1080/filters:no_upscale()/2019/10/14/1571013665367.gif?w=1920" width="900" height="500"></center>
 
 # <center><B><FONT COLOR="#yellow"> Data Analytics Bootcamp Final Project</FONT> <br>
 ## <center> <FONT COLOR="#yellow"> Global Economy Indicators Study and Forecast Predictor </FONT></center>
