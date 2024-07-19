@@ -273,7 +273,7 @@ def analisis(): #función para mostrar un conjunto de gráficas en formato matri
 
         df_combined_gov = pd.concat([df_otros_total, df_eurozona_total], ignore_index=True)
 
-        fig = px.line(df_combined_gov, x='Year', y='Consumption', color='Country',
+        fig = px.line(df_combined_gov, x='Year', y='Gov_Consumption', color='Country',
                     title='Annual Government Consumption: Eurozone vs Other Countries',
                     labels={'Gov_Consumption': 'Total Government Consumption', 'Year': 'Year'},
                     color_discrete_map={'Eurozone': '#001489',
